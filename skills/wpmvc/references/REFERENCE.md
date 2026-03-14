@@ -24,6 +24,7 @@
     php ayuco setup
     ```
 6. Follow the instructions, indicate if the project is a plugin or theme, set a project name, set a namespace (always use a single word namespace without '\\'), set a text domain (use the slug version of the root folder path), set an author and license.
+7. Remove any instance of the `.gitkeep` file.
 
 ## File structure
 

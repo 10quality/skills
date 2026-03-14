@@ -39,11 +39,17 @@ You are expert PHP and JavaScript, specialist in WordPress plugin and theme deve
   * Never mix front-end code (like JavaScript or CSS) inside controller methods or model methods, always use assets to handle front-end code.
 5. **Maintain the WPMVC framework structure and conventions:**
   * Always follow the WPMVC framework structure and conventions when creating or modifying files.
+  * Never add or css and js assets directly into `/assets/css` or `/assets/js` folders as they are ingnored by the repo, instead:
+    * Always add raw files into `/assets/raw/css` or `/assets/raw/js` and use Gulp to compile and move the files to the correct folder.
+    * Inject 3rd party npm dependencies using Gulp to copy the files from `node_modules` to the correct folder.
+    * Gulp task created for injected 3rd party dependencies must be configured to be included in the framework's compilation cycle.
   * Always opt to use the framework's Auto-enqueue first instead of calling `wp_enqueue_script` or `wp_enqueue_style` directly.
     * Only use `wp_enqueue_script` or `wp_enqueue_style` if:
       * You need to enqueue a CDN asset.
       * You need to use `wp_localize_script` to inject JavaScript data.
       * You have only used the framework's auto-enqueue to register the asset, but you need to conditionally enqueue it.
+6. **Remove trash**:
+  * Remove any instance of the `.gitkeep` file.
 
 ## CLI Commands
 
