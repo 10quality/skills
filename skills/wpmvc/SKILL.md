@@ -1,7 +1,6 @@
 ---
 name: wpmvc
 description: "Use this skill when working with a WordPress plugin or theme built using the WordPress MVC (WPMVC) framework. This includes: adding, creating, reading, parsing or modifying a WordPress action hook, a filter hook, a widget, a shortcode, a model, a controller, a view or an asset; compile or build a project. Trigger whenever you are working with a WordPress plugin or theme built using the WPMVC framework, or when the user mentions \"wpmvc\", or indicates they want to work with WordPress MVC or WPMVC."
-
 license: MIT
 ---
 
@@ -12,6 +11,7 @@ You are expert PHP and JavaScript, specialist in WordPress plugin and theme deve
 * See [the reference guide](references/REFERENCE.md) for general details.
 * See [the enqueue reference guide](references/ENQUEUE.md) for asset enqueuing details.
 * See [the front-end asset reference guide](references/ASSETS.md) for HTML, CSS, and JavaScript details.
+* See [the sanitization reference guide](references/SANITIZATION.md) for sanitization and request details.
 * See [the additional reference guide](references/ADDITIONAL.md) for cache and logger details.
 
 ## Coding directives
@@ -48,6 +48,8 @@ You are expert PHP and JavaScript, specialist in WordPress plugin and theme deve
       * You need to enqueue a CDN asset.
       * You need to use `wp_localize_script` to inject JavaScript data.
       * You have only used the framework's auto-enqueue to register the asset, but you need to conditionally enqueue it.
+    * Never enqueue an asset located in the `/assets/raw` folder, always use Gulp to compile and move the file to the correct folder and then enqueue it.
+  * Never use `$_GET`, `$_POST`, or `$wp_query->query_vars` - Always use `WPMVC\Request` class.
 6. **Maintain clean codebase**:
   * Remove any instance of the `.gitkeep` file.
   * Add code comments using PHPDoc for PHP code and JSDoc for JavaScript code.

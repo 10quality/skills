@@ -222,6 +222,15 @@ Use the command:
 npm run dev
 ```
 
+### CSS, JavaScript, SASS, SCSS
+
+Steps to add an asset and compile it:
+1. Create the asset using the command `php ayuco create {type}:{filename}`.
+2. Run the command `npm run dev` to compile the asset and its dependencies.
+
+* Raw non compiled assets are located at `[project root path]/assets/raw`.
+* Compiled assets are located at `[project root path]/assets`.
+
 ## Versioning
 
 To change the version of the project use the command:
@@ -265,6 +274,47 @@ Use the command to call the prompt wizard:
 ```bash
 php ayuco set license
 ```
+
+## Localization support
+
+Enable localize at `[project root path]/app/Config/app.php`.
+
+### Generate POT file
+
+Use the command:
+```bash
+php ayuco generate pot
+```
+
+### Generate PO file
+
+Use the command:
+```bash
+php ayuco generate po:{locale}
+```
+
+Where:
+* `{locale}` is the locale of the PO file to generate, for example `es_ES`.
+
+### Generate PO and MO file
+
+Use the command:
+```bash
+php ayuco generate mo:{locale}
+```
+
+Where:
+* `{locale}` is the locale of the MO file to generate, for example `es_ES`.
+
+### Generate POT, PO, MO and translate
+
+Use the command to generate or update the POT, PO, and MO files; and call to the CLI wizard for string translations:
+```bash
+php ayuco generate translations:{locale}
+```
+
+Where:
+* `{locale}` is the locale of the translation strings to generate, for example `es_ES`.
 
 ## Build
 
