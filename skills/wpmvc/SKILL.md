@@ -48,8 +48,11 @@ You are expert PHP and JavaScript, specialist in WordPress plugin and theme deve
       * You need to enqueue a CDN asset.
       * You need to use `wp_localize_script` to inject JavaScript data.
       * You have only used the framework's auto-enqueue to register the asset, but you need to conditionally enqueue it.
-6. **Remove trash**:
+6. **Maintain clean codebase**:
   * Remove any instance of the `.gitkeep` file.
+  * Add code comments using PHPDoc for PHP code and JSDoc for JavaScript code.
+    * Only when necessary comments to explain non-obvious code or logic.
+    * Avoid comments that simply restate what the code does.
 
 ## CLI Commands
 
