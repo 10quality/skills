@@ -11,11 +11,11 @@
     ```bash
     composer create-project --no-plugins 10quality/wpmvc .
     ```
-3. Run the following command to PHP back-end install the dependencies:
+3. Run the following command to install the PHP back-end dependencies:
     ```bash
     composer install
     ```
-4. Run the following command to fron-end install the dependencies:
+4. Run the following command to install the NPM fron-end dependencies:
     ```bash
     npm install
     ```
