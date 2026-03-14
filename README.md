@@ -1,6 +1,6 @@
 # SKILLs
 
-A collection of SKILLs for for AI coding.
+A collection of SKILLs for AI coding agents.
 
 ## List
 
