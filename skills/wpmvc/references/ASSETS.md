@@ -12,7 +12,7 @@ All CSS/JS/SASS files under `[project]/assets/raw` are subjected to compilation 
 * `[...]/assets/raw/sass`: SASS/SCSS files are compiled into CSS and stored in `[..]/assets/css`.
 
 
-## Vendor asset
+## 3rd party / vendor asset injection
 
 Downloaded `npm` dependencies need to be copied using **Gulp** inside the `[project]/assets/css` or `[project]/assets/js` folder to be accessible by the framework, then enqueued using the auto-enqueue settings.
 
